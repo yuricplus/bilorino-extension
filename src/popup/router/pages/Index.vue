@@ -1,12 +1,13 @@
 <template>
   <div class="container">
-    <img src="https://www.esmaelmorais.com.br/wp-content/uploads/2019/11/bozo-coringa-820x480.jpg" alt="bozo" width="400"/>
+    <div class="box-field">
+      <input type="text" placeholder="Digite o nome aqui" />
+      <button>Change</button>
+    </div>
   </div>
 </template>
 
 <script>
-import background from '../../../background';
-
 export default {
   data() {
     return {
@@ -17,23 +18,23 @@ export default {
     changeName() {
       document.body.innerHTML = document.body.innerHTML.replace(/Bolsonaro/g, this.name);
     },
-  },
-  mounted() {
-    console.log(background());
-  },
+  }
 };
 </script>
 
 <style lang="scss">
+* {
+  font-family: 'Open Sans', sans-serif;
+}
 html {
-  background: #003049;
+  background: #4F759B;
 }
 .container {
   width: 400px;
   height: 300px;
   text-align: center;
   border-radius: 8px;
-  background: #003049;
+  background: #4F759B;
   position: relative;
 
   .box-field {
@@ -51,6 +52,7 @@ html {
       border-radius: 8px;
       padding: 10px;
       border: none;
+      font-weight: bold;
     }
   }
 
