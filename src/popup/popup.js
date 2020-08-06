@@ -9,8 +9,6 @@ Vue.prototype.$browser = global.browser;
 
 document.body.innerHTML = document.body.innerHTML.replace(/Bolsonaro/g, 'Bilorino');
 
-console.log(document);
-
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
