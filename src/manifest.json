@@ -1,29 +1,23 @@
 {
-  "name": "change-bilorino",
-  "description": "A Vue.js web extension",
-  "version": null,
-  "permissions": [
-    "tabs",
-    "activeTab",
-    "webNavigation",
-    "*://*/*"
+  "description": "description here",
+  "icons": {},
+  "manifest_version": 3,
+  "host_permissions": ["http://*/*", "https://*/*"],
+  "name": "Bilorino",
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content.js"]
+    }
   ],
-  "manifest_version": 2,
-  "icons": {
-    "48": "icons/icon_48.png",
-    "128": "icons/icon_128.png"
-  },
-  "browser_action": {
-    "default_title": "change-bilorino",
-    "default_popup": "popup/popup.html"
+  "version": "1.0.1",
+  "action": {
+    "default_icon": "img/icon_active.png",
+    "default_popup": "popup/popup.html",
+    "default_title": "Bilorino"
   },
   "background": {
-    "scripts": [
-      "background.js"
-    ]
+    "service_worker": "./background.js"
   },
-  "options_ui": {
-    "page": "options/options.html",
-    "chrome_style": true
-  }
+  "content_security_policy": {}
 }

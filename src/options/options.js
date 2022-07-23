@@ -3,7 +3,9 @@ import App from './App';
 
 global.browser = require('webextension-polyfill');
 
-console.log("teste")
+console.log('teste');
+
+alert('trieteza');
 
 /* eslint-disable no-new */
 new Vue({
